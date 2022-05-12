@@ -1,0 +1,26 @@
+package project;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class TryNew {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter num  :");
+		int num=sc.nextInt();
+		System.out.println("Enter the name :");
+		String name=sc.next();
+		sc.close();
+		try {
+			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:ex","system","Dhiva@chain");
+			Statement st=con.createStatement();
+			int result =st.executeUpdate("insert into filetable values(num,name)");
+			System.out.println(result+"record affected");
+		}catch(Exception ex) {
+			System.out.println(ex);
+		}
+		
+	}
+}
