@@ -1,10 +1,9 @@
 package com.chainsys.miniproject.pojo;
 
 import java.util.Date;
-
+import java.util.List;
 public class Doctor {
-	 
-	private int doc_id;
+	private int id;
 	private String doc_name;
 	private Date DOB;
 	private String speciality;
@@ -12,18 +11,19 @@ public class Doctor {
 	private long phone_no;
 	private float fees;
 	
+	
+	
 	public int getDoc_id() {
-		return doc_id;
+		return id;
 	}
 	public void setDoc_id(int doc_id) {
-		this.doc_id = doc_id;
+		this.id = doc_id;
 	}
-	
-	public Date getDOB() {
-		return DOB;
+	public String getDoc_name() {
+		return doc_name;
 	}
-	public void setDOB(Date dOB) {
-		DOB = dOB;
+	public void setDoc_name(String doc_name) {
+		this.doc_name = doc_name;
 	}
 	public String getSpeciality() {
 		return speciality;
@@ -49,11 +49,16 @@ public class Doctor {
 	public void setFees(float fees) {
 		this.fees = fees;
 	}
-	public String getDoc_name() {
-		return doc_name;
+	@Override
+	public String toString() {
+		return String.format("%d, %s, %s, %s, %s",id,doc_name,DOB,city,phone_no);
 	}
-	public void setDoc_name(String doc_name) {
-		this.doc_name = doc_name;
+	public Date getDOB() {
+		return DOB;
 	}
+	public void setDOB(Date dOB) {
+		DOB = dOB;
+	}
+	
 	
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+let x = 5;
+console.log(x);
+/*
+ * we started june 2022 with a party. &lt /script &gt
+ * we had cake, samosa and coke for birthday party
+ * When the browser sees the script end tag ( &lt /script &gt) js will break
+ * all text from tag forward will be processed as HTML
+ * To avoid this , avoid using end script tag any where in java script
+ * '</scr'+'ipt>'
+ */
+ document.writeln('</scr'+'ipt>');
+</script>
+<script>
+/*
+ * Interpoltion: Using javascript variable inside HtML Content
+ * The HTML content must be surrounded with tick.
+ * The JavaScript variables or statement must be defined inside ${}. 
+ */
+document.writeln(`<p> The value of x is ${x}</p>`);
+</script>
+</body>
+</html>

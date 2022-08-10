@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>DOM A</title>
+<style>
+.green {
+	background-color: green;
+}
+
+.yellow {
+	background-color: yellow;
+}
+</style>
+</head>
+<body>
+	<div id="div1" class="green">Hello JavaScript</div>
+	<div>
+		<h1>fruits</h1>
+		<ul>
+			<li class="yellow">Apple</li>
+			<li>Orange</li>
+			<li class="green">mango</li>
+		</ul>
+		<img src="Images/tiger.jpg" alt="tiger">
+		<div id="div2" class="yellow">
+			<input type="text" name="fname" id="fname" value="dhivakar"
+				placeholder="first name">
+		</div>
+	</div>
+	<!-- <script>
+console.log("Hello world");
+console.dir(document);
+console.log(document.URL);
+console.dir(document.children[0]); // html
+console.dir(document.children[0].children[1]); // body
+console.dir(document.children[0].children[1].childNodes);
+</script>-->
+	<!-- <script>
+var x=234;
+console.log(x);
+var cities={'capital':'chennai','native':'Sivagangai','permanet':'madurai','favourite':'salem'};
+console.log(cities);
+</script>-->
+	<script>
+		var divElement = document.getElementById("div1");
+		//divElement.innerHTML="Hello June 2022";
+		divElement.innerText = "Hello June 2022";
+		var textElement = document.getElementById("fname");
+		console.log(textElement.value);
+		var listItems = document.getElementsByTagName("li");
+		var itemLength = listItems.length;
+		for (var i = 0; i < itemLength; i++) {
+			console.log(listItems[i].innerText);
+		}
+		listItems[0].innerText = "Samsung";
+		listItems[1].innerText = "Apple";
+		listItems[2].innerText = "Redmi";
+	</script>
+</body>
+</html>

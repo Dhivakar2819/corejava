@@ -25,7 +25,7 @@ public class EmployeeDao {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		Connection con = null;
+		Connection con=null;
 		try {
 			con = DriverManager.getConnection(dbUrl, username, password);
 		} catch (SQLException e) {
@@ -86,14 +86,14 @@ public class EmployeeDao {
 			ps = con.prepareStatement(updatequery);
 			ps.setString(1, newemp.getFirst_name());
 			ps.setInt(7, newemp.getEmp_id());
+
 			ps.setString(2, newemp.getLast_name());
 			ps.setString(3, newemp.getEmail());
 			// convert java.util.Date to java.sql.date
 			ps.setDate(4, convertTosqlDate(newemp.getHire_date()));
 			ps.setString(5, newemp.getJob_id());
 			ps.setFloat(6, newemp.getSalary());
-
-			ps.executeUpdate();
+			
 			rows = ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -2,9 +2,9 @@ package com.chainsys.threat;
 
 public class TestRunnableThreads {
 	public static void main(String[] args) {
-		runningMultipleRunnableThreads();
+//		runningMultipleRunnableThreads();
 //		multiThreadsonjoin();
-//		exitingMultiThreads();
+		exitingMultiThreads();
 //		workingThreadPriority();
 //		checkingStateofThreads();
 	}
@@ -62,7 +62,7 @@ catch(Exception e)
 			t2.join(200);
 			System.out.println("From Main AMT: " + obj.amount);			
 		 }
-catch(Exception e)
+		 catch(Exception e)
 		 {
 			 System.out.println(e.getMessage());
 	     }

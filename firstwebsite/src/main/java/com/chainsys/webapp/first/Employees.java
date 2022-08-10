@@ -4,11 +4,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Scanner;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,9 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.chainsys.miniproject.commonutil.ExceptionManager;
-import com.chainsys.miniproject.commonutil.HTMLHelper;
 import com.chainsys.miniproject.commonutil.InvalidInputDataException;
-import com.chainsys.miniproject.commonutil.LogManager;
 import com.chainsys.miniproject.commonutil.Validator;
 import com.chainsys.miniproject.dao.EmployeeDao;
 import com.chainsys.miniproject.pojo.Employee;
@@ -43,7 +39,7 @@ public class Employees extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
 		PrintWriter out = response.getWriter();
 		List<Employee> emplist = EmployeeDao.getAllEmployee();
 		Iterator<Employee> empItr = emplist.iterator();

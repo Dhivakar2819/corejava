@@ -1,0 +1,110 @@
+@charset "ISO-8859-1";
+/*
+class selector
+*/
+.centered {
+	text-align: center;
+}
+
+.largefont {
+	font-size: large;
+	background-color: pink;
+	color: blue;
+}
+
+.mediumfont {
+	font-size: medium;
+}
+
+.smallfont {
+	font-size: small;
+}
+
+.div {
+	color: red;
+}
+
+/*
+Type selector
+*/
+div>p {
+	color: brown;
+	font-size: medium;
+}
+/*
+id selector
+*/
+#div1 {
+	color: #5b156a;
+	font-size: larger;
+	text-align: left;
+}
+/*
+pseudo selector
+*/
+div:first-child {
+	color: lime;
+	font-size: medium;
+}
+
+div:last-child {
+	color: skyblue;
+	font-size: medium;
+}
+
+div:nth-child(even) {
+	color: brown;
+	font-size: medium;
+}
+
+div:nth-child(odd) {
+	color: orange;
+	font-size: medium;
+}
+
+div:nth-child(5n+1) {
+	color: cyan;
+	font-size: medium;
+}
+/*
+type selector and pseudo selector for link
+*/
+a{
+	color: lime;
+	text-decoration:none;
+}
+a:hover{
+	color: yellow;
+	text-decoration:underline;
+}
+/*#chennai{
+	color:blue;
+}
+#madurai{
+	color:purple;	
+}
+#sivagangai{
+	color:red;
+}*/
+/*a[href="https://chennai.nic.in"] {
+	color:silver;
+}
+a[href="https://madurai.nic.in"] {
+	color:gray;
+}
+a[href="https://sivagangai.nic.in"] {
+	color:purple;
+}*/
+input[id="fname"]{
+	color:blue;
+	background-color:pink;
+}
+a[href*="chennai.nic"] {
+	color:silver;
+}
+a[href*="madurai.nic"] {
+	color:gray;
+}
+a[href*="sivagangai.nic"] {
+	color:purple;
+}

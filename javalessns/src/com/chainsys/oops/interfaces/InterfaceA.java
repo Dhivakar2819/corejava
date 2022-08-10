@@ -7,7 +7,7 @@ public interface InterfaceA {
 		void print();
 		default void print(String type)
 		{
-			System.out.println("");
+			System.out.println("print");
 		}
 		static void echo()
 		{
